@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import { Input, Button, Container, Label } from '../StyledComponent/HomePage.styled'
 
 const HomePageComponent = () => {
 
@@ -7,24 +8,29 @@ const HomePageComponent = () => {
     const [password, setPassword] = useState('')
     return (
         <>
-            <div style={{ display: 'flex', flexDirection:'column'}} >
-                <input
+
+            <Container >
+
+                <Label>Username</Label>
+                <Input
                     type="text"
+                    placeholder="Enter username"
                     value={username}
                     onChange={(event) => {
                         setUserName(event.target.value.trimStart());
                     }}
                 />
-                <input
+                <Label> Password </Label>
+                <Input
                     type="password"
+                    placeholder='Enter password'
                     value={password}
                     onChange={(event) => {
                         setPassword(event.target.value.trimStart());
                     }}
                 />
-                <h1>UserName:-{username}</h1>
-                <h1>Password:-{password}</h1>
-            </div>
+                <Button>Login</Button>
+            </Container>
         </>
 
     );
