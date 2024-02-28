@@ -1,39 +1,17 @@
 
-import React, { useState } from 'react'
-import { Input, Button, Container, Label } from '../StyledComponent/HomePage.styled'
-
+import React from 'react'
+import { Container, Card, Label } from '../StyledComponent/Homepage.styled';
+import SignUpPageComponent from './RegistrationPage';
 const HomePageComponent = () => {
-
-    const [username, setUserName] = useState('')
-    const [password, setPassword] = useState('')
     return (
         <>
-
             <Container >
-
-                <Label>Username</Label>
-                <Input
-                    type="text"
-                    placeholder="Enter username"
-                    value={username}
-                    onChange={(event) => {
-                        setUserName(event.target.value.trimStart());
-                    }}
-                />
-                <Label> Password </Label>
-                <Input
-                    type="password"
-                    placeholder='Enter password'
-                    value={password}
-                    onChange={(event) => {
-                        setPassword(event.target.value.trimStart());
-                    }}
-                />
-                <Button>Login</Button>
+                <Card>
+                    <Label>REGISTRATION PAGE</Label>
+                </Card>
             </Container>
         </>
-
-    );
-}
+    )
+};
 
 export default HomePageComponent;
