@@ -25,16 +25,63 @@ export const Card = styled.div({
 
 });
 
+
+export const Div2 = styled.div({
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"baseline",
+    columnGap:"160px",
+
+});
+
 export const Label =  styled.label({
     fontSize:"30px",
     color:"black",
     fontWeight:"1px",
     marginTop:"30px"
-   
+});
 
-   
-    
-})
+
+
+
+
+export const NameLabel = styled.label({
+    fontSize:"20px",
+    // color:"green",
+    // fontWeight:"bold",
+    marginTop:"30px",
+    marginBottom:"4px"
+});
+
+export const NameInput = styled.input({
+    width: '60%',
+    padding: '10px',
+    borderRadius: '8px'
+});
+
+export const Button = styled.button({
+    paddingRight: '50px',
+    paddingLeft: '50px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    border: '0px',
+    borderRadius: '8px',
+    backgroundColor: "wheat",
+    marginTop:'20px'
+});
+
+
+
+export const LabelPassowrd = styled.label({
+    fontSize:"15px",
+    // marginTop:"33px"
+});
+
+
+
+
+
 
 
 

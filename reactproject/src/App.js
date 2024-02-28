@@ -11,12 +11,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<HomePageComponent />}>
+        <Route path="/" element={<HomePageComponent />} />
             <Route path="/signup" element={<SignUpPageComponent />} />
             <Route path="/loginpage" element={<LogInPageComponent />} />
             <Route path="/forgetpasswordpage" element={<ForgetPasswordPageComponent />} />
             <Route path="*" element={<ErrorPageComponent />} />
-          </Route>
+          
 
         </Routes>
       </BrowserRouter >
