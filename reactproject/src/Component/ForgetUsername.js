@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Link,NavLink } from 'react-router-dom';
 import {
     Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
@@ -8,8 +7,8 @@ import {
 
 } from '../StyledComponent/Homepage.styled';
 
-
-const HomePageComponent = () => {
+import { Link, NavLink } from 'react-router-dom';
+const ForgetUsernamePageComponent = () => {
 
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -22,7 +21,7 @@ const HomePageComponent = () => {
             <Container >
                 <Card>
                     <CardHeader>
-                        <LabelLogin>Log in to your </LabelLogin>
+                        <LabelLogin>"Lost your username? No problem! We'll help you retrieve it." </LabelLogin>
                         <Label><h1>BUZZINESS</h1></Label>
                         <LabelPortal>Portal</LabelPortal>
                     </CardHeader>
@@ -32,9 +31,9 @@ const HomePageComponent = () => {
                         <InputContainer>
                             <Div2>
                                 <NameLabel>Username</NameLabel>
-                                <LabelPassword><NavLink to="/forgetUsernamepage">Forget?</NavLink></LabelPassword>
+                                {/* <LabelPassword><Link to="/forgetpasswordpage">Forget?</Link></LabelPassword> */}
                             </Div2>
-                            
+
                             <NameInput
                                 type="text"
                                 placeholder="Enter username"
@@ -45,25 +44,11 @@ const HomePageComponent = () => {
                             />
                         </InputContainer>
 
-                        <InputContainer>
-                            <Div2>
-                                <NameLabel>Password</NameLabel>
-                                <LabelPassword> <Link to="/forgetpasswordpage">Forget?</Link></LabelPassword>
-                            </Div2>
-                            <NameInput
-                                type="password"
-                                placeholder='Enter password'
-                                value={password}
-                                onChange={(event) => {
-                                    setPassword(event.target.value.trimStart());
-                                }}
-                            />
-                        </InputContainer>
                         <Footer>
                             <Button onClick={() => {
                                 onhandleclick();
-                            }}>Login</Button>
-                            <FooterLabel>Don't have an Account?<Link to="/signup">Register?</Link></FooterLabel>
+                            }}>Forget Username</Button>
+                            <FooterLabel>Have an Account?<Link to="/">Login?</Link></FooterLabel>
                         </Footer>
 
                     </UserForm>
@@ -74,4 +59,4 @@ const HomePageComponent = () => {
     )
 };
 
-export default HomePageComponent;
+export default ForgetUsernamePageComponent;
