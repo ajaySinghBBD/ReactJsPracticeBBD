@@ -39,7 +39,7 @@ export const CardHeader = styled.div({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     alignItems: "center",
     height: "230px",
 });
@@ -138,3 +138,17 @@ export const Footer = styled.div({
     justifyContent: "space-evenly",
     alignItems: "center",
 });
+
+
+export const LabelRegistration = styled.label({
+    fontSize: "20px",
+    fontWeight: "bold",
+    marginTop: "0px",
+    marginBottom: "4px",
+    color:"black"
+});
+
+export const Color =styled.p({
+    color:'rebeccapurple'
+})
+

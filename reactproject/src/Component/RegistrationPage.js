@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
     Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
-    Footer, LabelLogin
+    Footer, LabelLogin, LabelRegistration
 
 } from '../StyledComponent/Homepage.styled';
 
@@ -22,7 +22,7 @@ const SignUpPageComponent = () => {
                 <Card>
                     <CardHeader>
                         <LabelLogin>Let's Sign-Up </LabelLogin>
-                        <Label><h1>BUZZINESS</h1></Label>
+                        <Label>BUZZINESS</Label>
                         <LabelPortal>Portal</LabelPortal>
                     </CardHeader>
 
@@ -30,7 +30,7 @@ const SignUpPageComponent = () => {
 
                         <InputContainer>
                             <Div2>
-                                <NameLabel>Username</NameLabel>
+                                <LabelRegistration>Username</LabelRegistration>
                                 {/* <LabelPassword><Link to="/forgetpasswordpage">Forget?</Link></LabelPassword> */}
                             </Div2>
 
@@ -46,7 +46,7 @@ const SignUpPageComponent = () => {
                         
                         <InputContainer>
                             <Div2>
-                                <NameLabel>User-Email</NameLabel>
+                                <LabelRegistration>User-Email</LabelRegistration>
                                 {/* <LabelPassword><Link to="/forgetpasswordpage">Forget?</Link></LabelPassword> */}
                             </Div2>
 
@@ -62,7 +62,7 @@ const SignUpPageComponent = () => {
 
                         <InputContainer>
                             <Div2>
-                                <NameLabel>Password</NameLabel>
+                                <LabelRegistration>Password</LabelRegistration>
                                 {/* <LabelPassword><Link to="/forgetpasswordpage">Forget?</Link></LabelPassword> */}
                             </Div2>
 
@@ -78,7 +78,7 @@ const SignUpPageComponent = () => {
 
                         <InputContainer>
                             <Div2>
-                                <NameLabel>Confirm-Password</NameLabel>
+                                <LabelRegistration>Confirm-Password</LabelRegistration>
                                 {/* <LabelPassword> <Link to="/forgetpasswordpage">Forget?</Link></LabelPassword> */}
                             </Div2>
                             <NameInput

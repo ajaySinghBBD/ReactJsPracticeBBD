@@ -4,7 +4,7 @@ import { Link,NavLink } from 'react-router-dom';
 import {
     Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
-    Footer, LabelLogin
+    Footer, LabelLogin,Color
 
 } from '../StyledComponent/Homepage.styled';
 
@@ -23,7 +23,7 @@ const HomePageComponent = () => {
                 <Card>
                     <CardHeader>
                         <LabelLogin>Log in to your </LabelLogin>
-                        <Label><h1>BUZZINESS</h1></Label>
+                        <Label>BUZZINESS</Label>
                         <LabelPortal>Portal</LabelPortal>
                     </CardHeader>
 

@@ -22,7 +22,7 @@ const ForgetPasswordPageComponent = () => {
                 <Card>
                     <CardHeader>
                         <LabelLogin>"Lost your username? No problem! We'll help you retrieve it." </LabelLogin>
-                        <Label><h1>BUZZINESS</h1></Label>
+                        <Label>BUZZINESS</Label>
                         <LabelPortal>Portal</LabelPortal>
                     </CardHeader>
 

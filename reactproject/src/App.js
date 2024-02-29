@@ -6,6 +6,7 @@ import ForgetPasswordPageComponent from './Component/ForgetPasswordPage';
 import ErrorPageComponent from './Component/ErrorPage';
 import HomePageComponent from './Component/HomePage';
 import ForgetUsernamePageComponent from './Component/ForgetUsername';
+import MainPageComponent from './Component/MainPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/loginpage" element={<LogInPageComponent />} />
             <Route path="/forgetpasswordpage" element={<ForgetPasswordPageComponent />} />
             <Route path="/forgetUsernamepage" element={<ForgetUsernamePageComponent />} />
+            <Route path="/mainpage" element={<MainPageComponent />} />
             <Route path="*" element={<ErrorPageComponent />} />
           
 
