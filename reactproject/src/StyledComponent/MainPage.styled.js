@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div({
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(24,28,36)',
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "flex-end",
@@ -18,28 +18,67 @@ export const MainContainer = styled.div({
     height:"87%",
     // margin:"10% 0px 0px 8%",
     backgroundColor:"white",
-    borderRadius:"20px 0px 0px 0px",
+    borderRadius:"22px 0px 0px 0px",
 });
 
 export const Navbar =  styled.div({
         position:"absolute",
-        top:"30px",
+        top:"9px",
         display:"flex",
         justifyContent:"space-between",
-        alignItems:"center",
-        left:"0px",
-        width:"100%"
+        alignItems:"baseline",
+        left:"24px",
+        width:"94%"
        
 });
 
 export const SideNavbar =  styled.div({
-    position:"relative",
-    top:"105px",
+    position:"absolute",
+    top:"125px",
     display:"flex",
     flexDirection:"column",
     justifyContent:"flex-start",
     alignItems:"center",
-    left:"64px",
-    height:"100vh",
-    zIndex:22
-})
+    left:"11px",
+    height:"85vh",
+    zIndex:22,
+    width:"100px"
+});
+
+// export const Image = styled.img({
+//     padding:"20px",
+//     marginTop:"15px",
+//     backgroundColor:"rgb(52,60,76)",
+//     borderRadius:"15px"
+
+//     background-clip: padding-box;
+//     -webkit-background-clip: padding-box;
+//     border-radius: 15px;
+//     position: relative;
+//     transition: background 0.3s;
+
+//     &:hover {
+//         background: linear-gradient(to bottom, #e0040e 50%, #a12895 50%);
+//     }
+
+// })
+
+
+
+
+export const Image = styled.img`
+    padding: 20px;
+    margin-top: 10px;
+    background-color: rgb(52, 60, 76);
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.3s;
+
+    &:hover,
+    &:active {
+        background: linear-gradient(to bottom, #e0040e 40%, #a12895 60%);
+    }
+`;
+

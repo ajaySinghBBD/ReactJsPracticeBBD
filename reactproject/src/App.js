@@ -7,6 +7,7 @@ import ErrorPageComponent from './Component/ErrorPage';
 import HomePageComponent from './Component/HomePage';
 import ForgetUsernamePageComponent from './Component/ForgetUsername';
 import MainPageComponent from './Component/MainPage';
+import Dashborad from './Component/MainPage/dashboard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/forgetpasswordpage" element={<ForgetPasswordPageComponent />} />
             <Route path="/forgetUsernamepage" element={<ForgetUsernamePageComponent />} />
             <Route path="/mainpage" element={<MainPageComponent />} />
+            <Route path="/dashboard" element={<Dashborad />} />
             <Route path="*" element={<ErrorPageComponent />} />
           
 
