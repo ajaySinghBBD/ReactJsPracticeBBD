@@ -25,7 +25,7 @@ export const Card = styled.div({
         marginRight: "2px",
     },
 
-    "@media (min-width: 426px) and  (max-width: 768px)": {
+    "@media (min-width: 425px) and  (max-width: 768px)": {
         width: "70%",
         marginRight: "10px", 
     },
@@ -75,6 +75,17 @@ export const InputContainer = styled.div({
     alignItems: "center",
 });
 
+export const UserImage = styled.img({
+    width:"90px",
+    height:"90px",
+    padding:"40px",
+    "@media (max-width: 425px)": {
+        width:"60px",
+        height:"60px",
+        padding:"20px",
+    },
+});
+
 export const Div2 = styled.div({
     display: "flex",
     flexDirection: "row",
@@ -107,9 +118,17 @@ export const NameLabel = styled.label({
 
 export const NameInput = styled.input({
     width: '70%',
-    padding: '10px',
+    padding: '10px 10px 10px 10px',
     borderRadius: '8px',
 });
+
+export const MessageLabel = styled.label(props => ({
+    width: '70%',
+    padding: '2px 10px 0px 10px',
+    visibility: props.isHidden ? 'hidden' : 'visible',
+    color: props.isHidden ? 'transparent' : 'red'
+  
+}));
 
 export const Button = styled.button({
     paddingRight: '50px',
@@ -130,7 +149,7 @@ export const FooterLabel = styled.label({
 });
 
 export const Footer = styled.div({
-    marginTop: "20px",
+    marginBottom: "20px",
     height: "100px",
     width: "50%",
     display: "flex",

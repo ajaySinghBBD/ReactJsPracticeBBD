@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
 import {
-    Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
+    Container, Card, Label, NameInput, Button, Div2,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
     Footer, LabelLogin, LabelRegistration
 
 } from '../StyledComponent/Homepage.styled';
 
-import { Link,NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const SignUpPageComponent = () => {
 
     const [username, setUserName] = useState('');

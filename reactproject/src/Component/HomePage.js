@@ -1,22 +1,41 @@
 
-import React, { useState } from 'react';
-import { Link,NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link,NavLink, useNavigate } from 'react-router-dom';
 import {
     Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
-    Footer, LabelLogin,Color
+    Footer, LabelLogin, UserImage, MessageLabel
 
 } from '../StyledComponent/Homepage.styled';
+import userimage from '../Asset/UserImage.svg';
+
+
+
 
 
 const HomePageComponent = () => {
+    const navigate = useNavigate();
 
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [labelhideShow , setlabelhideShow] = useState(true);
 
     function onhandleclick() {
-        console.log("i am cliock")
+        if(username==="ajay" && password==="ajay")
+        {
+            navigate('/dashboard');
+        }else{
+            setlabelhideShow(false);
+        }
+       
     }
+
+    useEffect(()=>{
+            setTimeout(() => {
+                setlabelhideShow(true);  
+            }, 5000);
+    },[labelhideShow]);
+
     return (
         <>
             <Container >
@@ -28,9 +47,11 @@ const HomePageComponent = () => {
                     </CardHeader>
 
                     <UserForm>
-
+                            <UserImage src={userimage}></UserImage>
                         <InputContainer>
+                     
                             <Div2>
+                          
                                 <NameLabel>Username</NameLabel>
                                 <LabelPassword><NavLink to="/forgetUsernamepage">Forget?</NavLink></LabelPassword>
                             </Div2>
@@ -43,6 +64,7 @@ const HomePageComponent = () => {
                                     setUserName(event.target.value.trimStart());
                                 }}
                             />
+                             <MessageLabel isHidden={labelhideShow}>Email-error</MessageLabel>
                         </InputContainer>
 
                         <InputContainer>
@@ -58,6 +80,7 @@ const HomePageComponent = () => {
                                     setPassword(event.target.value.trimStart());
                                 }}
                             />
+                            <MessageLabel isHidden={labelhideShow}>Email-error</MessageLabel>
                         </InputContainer>
                         <Footer>
                             <Button onClick={() => {

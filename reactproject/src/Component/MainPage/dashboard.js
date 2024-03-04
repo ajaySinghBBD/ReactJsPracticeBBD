@@ -1,7 +1,5 @@
 import React from "react"
 import { CompanyLogo, CompanyNameLabel, Container, ContainerSidebarDisplayScreen, ContentDisplayScreen, Image, LeftSidevar, Navbar, NavbarLeftLogo, NavbarRightLogo, UserProfile } from "./dashboard.styled"
-import ErrorPageComponent from "../../Asset/ErrorPage"
-import Logo from "../../Asset/home.svg"
 import home from "../../Asset/home.svg"
 import phone from "../../Asset/phone.svg"
 import wifi from "../../Asset/wifi.svg"
