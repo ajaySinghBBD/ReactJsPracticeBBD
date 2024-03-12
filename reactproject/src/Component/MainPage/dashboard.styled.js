@@ -62,8 +62,16 @@ export const NavbarRightLogo = styled.div({
 export const UserProfile = styled.img({
  
     padding:"20px",
+    cursor : "pointer"
+
+    // .pointer {cursor: pointer;}
   
 });
+
+export const LogOutButton =  styled.button({
+    padding:"20px",
+    marginRight:"5px"
+})
 
 export const ContainerSidebarDisplayScreen = styled.div({
     display: "flex",
@@ -105,10 +113,34 @@ export const Image = styled.img`
     border-radius: 15px;
     position: relative;
     transition: background 0.3s;
+    cursor : pointer;
 
     &:hover,
     &:active {
         background: linear-gradient(to bottom, #e0040e 40%, #a12895 60%);
+    }
+
+    /* Tooltip */
+    position: relative;
+    display: inline-block;
+
+    &:hover::after {
+        content: "${props => props.tooltip}"; /* Use tooltip prop as content */
+        position: absolute;
+        background-color: red;
+        color: red;
+        padding: 5px;
+        border-radius: 5px;
+        bottom: 100%; /* Position above the image */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; /* Prevent tooltip from wrapping */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1; /* Show tooltip on hover */
     }
 `;
 

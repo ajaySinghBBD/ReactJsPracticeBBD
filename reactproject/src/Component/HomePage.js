@@ -1,6 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
-import { Link,NavLink, useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link,NavLink, Navigate, useNavigate } from 'react-router-dom';
 import {
     Container, Card, Label, NameLabel, NameInput, Button, Div2, LabelPassword,
     CardHeader, UserForm, LabelPortal, InputContainer, FooterLabel,
@@ -8,6 +8,9 @@ import {
 
 } from '../StyledComponent/Homepage.styled';
 import userimage from '../Asset/UserImage.svg';
+import Authcontext from '../contexthook/Contexthook_Implementations';
+import UserContext from '../contexthook/Contexthook_Api';
+
 
 
 
@@ -15,6 +18,8 @@ import userimage from '../Asset/UserImage.svg';
 
 const HomePageComponent = () => {
     const navigate = useNavigate();
+    
+    const contextobj =  useContext(UserContext);
 
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -23,6 +28,9 @@ const HomePageComponent = () => {
     function onhandleclick() {
         if(username==="ajay" && password==="ajay")
         {
+            localStorage.setItem("username",username);
+            contextobj.login(username);
+            console.log("usrename  "+contextobj.user);
             navigate('/dashboard');
         }else{
             setlabelhideShow(false);
@@ -35,6 +43,11 @@ const HomePageComponent = () => {
                 setlabelhideShow(true);  
             }, 5000);
     },[labelhideShow]);
+
+    if(contextobj.user)
+    {
+        return <Navigate to="/dashboard" />;
+    }
 
     return (
         <>
